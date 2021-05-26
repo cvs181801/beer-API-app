@@ -8,7 +8,7 @@
         <div class="container">
              <div class="filters">
                   <div class="card-filter-card">
-                        <div class="filter container">
+                        <div class="filter-container">
                              <div class="filter-text">
                                  <p>Alcohol Vol (ABV):</p>
                                     <div>
@@ -24,27 +24,83 @@
                                                     <input type="radio" name="filter-abv" 
                                                     class="beer" id="abvWeak" value="weak"
                                                     />
-                                                    <span>ALL</span>
+                                                    
                                                 </label>
                                                 <label for="abvMedium">
                                                     <input type="radio" name="filter-abv" 
                                                     class="beer" id="abvMedium" value="medium"
                                                     />
-                                                    <span>ALL</span>
+                                    
                                                 </label>
                                                 <label for="abvStrong">
                                                     <input type="radio" name="filter-abv" 
                                                     class="beer" id="abvStrong" value="strong"
                                                     />
-                                                    <span>ALL</span>
+                                                    
                                                 </label>
                                              </form>
-                                         </div>
+                                         </div><!--close filter -->
                                     </div>
-                             </div>
-                        </div>
-                  </div>
-             </div>
-        </div>
+                             </div><!--close filter-text -->
+                        </div><!--close filter-container -->
+                  </div><!--close card-filter-card-->
+                  <div class="card-filter-card">
+                    <div class="filter-container">
+                         <div class="filter-text">
+                             <p>Hoppiness (IBU):</p>
+                                <div>
+                                     <div class="filter">
+                                         <form id="filterIBU" class="filter-form">
+                                             <label for="ibuALL">
+                                                 <input type="radio" name="filter-ibu" 
+                                                 class="filter-all" id="ibuALL" value="all"
+                                                 checked/>
+                                                 <span>ALL</span>
+                                             </label>
+                                             <label for="ibuWeak">
+                                                <input type="radio" name="filter-abv" 
+                                                class="hops" id="ibuWeak" value="weak"
+                                                />
+                                                
+                                            </label>
+                                            <label for="ibuMedium">
+                                                <input type="radio" name="filter-ibu" 
+                                                class="hops" id="ibuMedium" value="medium"
+                                                />
+                                
+                                            </label>
+                                            <label for="ibuStrong">
+                                                <input type="radio" name="filter-ibu" 
+                                                class="hops" id="ibuStrong" value="strong"
+                                                />
+                                                
+                                            </label>
+                                         </form>
+                                     </div><!--close filter -->
+                                </div>
+                         </div><!--close filter-text -->
+                    </div><!--close filter-container -->
+              </div><!--close card-filter-card-->
+              <div class="card-filter-card">
+                <div class="filter-container">
+                     <div class="filter-text">
+                         <p>Page:<span id="pageNumber"></span></p>
+                            <div>
+                                 <div class="filter">
+                                     <button id="prevPage" class="page-btn" disabled>
+                                         <i class="far fa-caret-square-left"></i>
+                                     </button>
+                                     <button id="nextPage" class="page-btn" disabled>
+                                        <i class="far fa-caret-square-right"></i>
+                                    </button>
+                                 </div><!--close filter -->
+                            </div>
+                     </div><!--close filter-text -->
+                </div><!--close filter-container -->
+          </div><!--close card-filter-card-->
+             </div><!--close filters-->
+        </div><!--close container -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+        <script src="index.pack.js"></script>
     </body>
 </html>
