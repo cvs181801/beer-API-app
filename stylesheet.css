@@ -109,3 +109,15 @@ input + svg {
 .filter-all:focus + span {
     color: var(--blue);
 }
+
+.beer-all:hover,
+.beer-all:checked + svg,
+.beer-all:focus + svg {
+    color: var(--orange);
+}
+
+.hops-all:hover,
+.hops-all:checked + svg,
+.hops-all:focus + svg {
+    color: var(--green);
+}
