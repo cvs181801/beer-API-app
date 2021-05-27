@@ -6,7 +6,8 @@ async function getBeers() {
     beerResponseJson.forEach((beer) => {
         const beers = document.querySelector(".beers");
         const beerDiv = document.createElement("div");
-        beerDiv.innerHTML = 
+        let beerHTML = '';
+        beerHTML += 
         `
         <div class='beer-wrapper card'>
             <div class='beer'>
@@ -19,6 +20,7 @@ async function getBeers() {
             </div>
         </div>
        `;
+        beersDiv.innerHTML = beerHTML;
         beers.appendChild(beerDiv);
     })
 }
