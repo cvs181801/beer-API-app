@@ -110,15 +110,15 @@ input + svg {
     color: var(--blue);
 }
 
-.beer-all:hover,
-.beer-all:checked + svg,
-.beer-all:focus + svg {
+.beer:hover,
+.beer:checked + svg,
+.beer:focus + svg {
     color: var(--orange);
 }
 
-.hops-all:hover,
-.hops-all:checked + svg,
-.hops-all:focus + svg {
+.hops:hover,
+.hops:checked + svg,
+.hops:focus + svg {
     color: var(--green);
 }
 
