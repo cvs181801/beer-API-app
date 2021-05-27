@@ -132,4 +132,13 @@ page-btn {
     padding: 0 .8rem;
     color: var(--off-white);
     cursor: pointer;
+    transition: color 3s ease;
+}
+.page-btn:hover {
+    color: var(--blue);
+}
+
+.page-btn:disabled {
+    cursor: default;
+    color: var(--disabled);
 }
