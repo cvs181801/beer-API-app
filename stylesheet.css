@@ -113,13 +113,13 @@ input + svg {
 .beer:hover,
 .beer:checked + svg,
 .beer:focus + svg {
-    color: var(--orange);
+    fill: var(--orange);
 }
 
 .hops:hover,
 .hops:checked + svg,
 .hops:focus + svg {
-    color: var(--green);
+    fill: var(--green);
 }
 
 /* pagination buttons */
