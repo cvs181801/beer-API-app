@@ -121,3 +121,15 @@ input + svg {
 .hops-all:focus + svg {
     color: var(--green);
 }
+
+/* pagination buttons */
+
+page-btn {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 2rem;
+    padding: 0 .8rem;
+    color: var(--off-white);
+    cursor: pointer;
+}
