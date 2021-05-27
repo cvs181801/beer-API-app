@@ -53,3 +53,47 @@ header {
     grid-gap: 1rem;
     margin-bottom: 1rem;
 }
+
+.filter-card {
+    padding: .8rem;
+}
+
+.filter-container {
+    padding: .4rem .8rem;
+}
+
+.filter-text {
+    color: var(--black);
+    font-size: 1.3rem;
+    padding: .3rem;
+}
+
+.filter {
+    background-color: var(--black);
+    padding: .4rem .4rem .1rem .4rem;
+    border: 3px solid var(--blue);
+    border-radius: 2.2rem;
+}
+
+.filter-form {
+    display: flex;
+    align-items: center;
+}
+
+.filter-all + span {
+    font-size: 2rem;
+    padding: .5rem 1rem;
+    color: var(--off-white);
+}
+
+svg {
+    fill: var(--off-white);
+    height: 2rem;
+    width: 2rem;
+    margin: .5rem;
+}
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+}
