@@ -97,3 +97,15 @@ input[type="radio"] {
     position: absolute;
     opacity: 0;
 }
+
+input + span,
+input + svg {
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.filter-all:hover,
+.filter-all:checked + span,
+.filter-all:focus + span {
+    color: var(--blue);
+}
