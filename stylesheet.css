@@ -164,3 +164,8 @@ page-btn {
     text-align: center;
     width: 100%;
 }
+
+.beer, .beer__image {
+    margin: auto;
+    height: 20rem;
+}
