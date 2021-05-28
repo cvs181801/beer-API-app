@@ -124,7 +124,7 @@ input + svg {
 
 /* pagination buttons */
 
-page-btn {
+.page-btn {
     border: none;
     background-color: transparent;
     outline: none;
