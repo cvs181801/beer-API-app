@@ -9,7 +9,7 @@ async function getBeers() {
         let beerHTML = '';
         beerHTML += //`<h3>${beer.name}</h3>`;
         `
-        <div class='beer-wrapper card'>
+        <div class='beer-wrapper'>
             <div class='beer'>
                 <img class='beer__img' src="${beer.image_url}">
                 <h3>${beer.name}</h3>
