@@ -155,3 +155,12 @@ page-btn {
     align-items: flex-end;
     position: relative;
 }
+
+.beers, .beer {
+    display: grid;
+    grid-auto-column: 1fr;
+    align-items: end;
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+}
