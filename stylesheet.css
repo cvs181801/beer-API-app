@@ -62,7 +62,7 @@ header {
     padding: .4rem .8rem;
 }
 
-.filter-text {
+.filter-text, p {
     color: var(--black);
     font-size: 1.3rem;
     padding: .3rem;
