@@ -158,7 +158,7 @@ page-btn {
 
 .beers, .beer {
     display: grid;
-    grid-auto-column: 1fr;
+    grid-auto-columns: 1fr;
     align-items: end;
     padding: 2rem;
     text-align: center;
