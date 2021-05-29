@@ -47,7 +47,7 @@ header {
     box-shadow: var(--shadow);
 } 
 
- .filters {
+.filters {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 1rem;
@@ -86,7 +86,7 @@ header {
     color: var(--off-white);
 } 
 
- svg {
+svg {
     fill: var(--off-white);
     height: 2rem;
     width: 2rem;
