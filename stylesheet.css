@@ -75,10 +75,10 @@ header {
     border-radius: 2.2rem;
 }
 
-/*.filter-form {
+.filter-form {
     display: flex;
     align-items: center;
-}
+} /*
 
 .filter-all + span {
     font-size: 2rem;
