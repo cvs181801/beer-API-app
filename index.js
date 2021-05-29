@@ -1,6 +1,7 @@
 // variables
-const filter = document.getElementById("filterABV"); 
-let optionsAVB = "";
+const urlBase = "https://api.punkapi.com/v2/beers";
+const filterABV = document.getElementById("filterABV");
+let optionsABV = "";
 
 // filters
 
