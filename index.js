@@ -76,12 +76,14 @@ async function getBeers() {
     const beersDiv = document.querySelector('.beers');
     
     let beerHtml = "";
+    const genericBottle = 'https://cdn.pixabay.com/photo/2014/12/22/00/04/bottle-576717_960_720.png'; 
+    //(for those beers that don't have an image in the api, we added a default generic bottle image)
     
     beers.forEach(beer => {
        beerHtml += `
         <div class='beer-wrapper card'>
             <div class='beer'>
-                <img class='beer__img' src="${beer.image_url}">
+                <img class='beer__img' src="${beer.image_url ? beer.image_url : genericBottle}">
                 <h3>${beer.name}</h3>
                 <span class='beer__info'>
                     <span>ABV: ${beer.abv}%</span>
