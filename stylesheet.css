@@ -41,11 +41,11 @@ header {
 
 /* filters */
 
-/* .card {
+.card {
     display: flex;
     background-color: white;
     box-shadow: var(--shadow);
-} */
+} 
 
 /* .filters {
     display: grid;
