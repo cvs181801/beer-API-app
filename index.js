@@ -6,9 +6,6 @@ let optionsAVB = "";
 
 filterABV.addEventListener("change", e => {
     const value = e.target.value;
-
-    filterABV.addEventListener("change", e => {
-        const value = e.target.value; 
         
         switch (value) {
              case "all":
@@ -27,7 +24,6 @@ filterABV.addEventListener("change", e => {
         
         getBeers();
      });     
-})
 
 // get beer info
 async function getBeers() {
