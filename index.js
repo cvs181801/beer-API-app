@@ -1,45 +1,75 @@
 // variables
-const urlBase = "https://api.punkapi.com/v2/beers";
+const urlBase = "https://api.punkapi.com/v2/beers"; 
+
+//example urls
+
+//https://api.punkapi.com/v2/beers?abv_lt=4.6&ibu_lt=35
+//https://api.punkapi.com/v2/beers?abv_gt=7.5&ibu_gt=34&ibu_lt=75
+
 const filterABV = document.getElementById("filterABV");
+const filterIBU = document.getElementById("filterIBU");
 let optionsABV = "";
+let optionsIBU = "";
 
 // filters
-
 filterABV.addEventListener("change", e => {
-    const value = e.target.value;
-        
-        switch (value) {
-             case "all":
-                 optionsABV = "";
-                 break
-             case "weak":
-                 optionsABV = "abv_lt=4.6";
-                 break
-             case "medium":
-                 optionsABV = "abv_gt=4.5&abv_lt=7.6";
-                 break
-             case "strong":
-                 optionsABV = "abv_gt=7.5";
-                 break
-        }
-        
-        getBeers();
-     });     
+   const value = e.target.value; 
+   
+   switch (value) {
+        case "all":
+            optionsABV = "";
+            break
+        case "weak":
+            optionsABV = "abv_lt=4.6";
+            break
+        case "medium":
+            optionsABV = "abv_gt=4.5&abv_lt=7.6";
+            break
+        case "strong":
+            optionsABV = "abv_gt=7.5";
+            break
+   }
+   
+   getBeers();
+});
 
-// get beer info
+filterIBU.addEventListener("change", e => {
+    const value = e.target.value;
+    
+    switch(value) {
+        case "all":
+            optionsIBU = "";
+            break
+        case "weak": 
+            optionsIBU = "ibu_lt=35";  
+            break
+        case "medium":
+            optionsIBU = "ibu_gt=34&ibu_lt=75";
+            break
+        case "strong":
+            optionsIBU = "ibu_gt=75";
+            break
+    }
+    getBeers();
+})
+
 async function getBeers() {
-    const url = urlBase + "?" + optionsABV;
-    const beerResponse = await fetch("https://api.punkapi.com/v2/beers");
-    const beerResponseJson = await beerResponse.json();
+    const url = urlBase + "?" + optionsABV + "&" + optionsIBU;
     
+    // fetch
+    const beerPromise = await fetch(url);
+    const beers = await beerPromise.json();
     
-    beerResponseJson.forEach((beer) => {
-        const beers = document.querySelector(".beers");
-        const beerDiv = document.createElement("div");
-        let beerHTML = '';
-        beerHTML += //`<h3>${beer.name}</h3>`;
-        `
-        <div class='beer-wrapper'>
+    // render data
+    const beersDiv = document.querySelector('.beers');
+    
+    let beerHtml = "";
+      
+    // Fill in the blanks with the rest of the data
+    
+    beers.forEach(beer => {
+       beerHtml += `
+        <div class='beer-wrapper card'>
             <div class='beer'>
                 <img class='beer__img' src="${beer.image_url}">
                 <h3>${beer.name}</h3>
@@ -48,19 +78,22 @@ async function getBeers() {
                     <span>IBU: ${beer.ibu}</span>
                 </span>
             </div>
-                <div class='beer__content'>
-                    <div class='beer__name'>${beer.name}</div>
-                    <div class='beer__tagline'>${beer.tagline}</div>
-                    <div class='beer__description'>${beer.description}</div>
-                    <div class='beer__food-pairing'>
-                    Pair with: ${beer.food_pairing}
+            <div class='beer__content'>
+                <div class='beer__name'>${beer.name}</div>
+                <div class='beer__tagline'>${beer.tagline}</div>
+                <div class='beer__description'>${beer.description}</div>
+                <div class='beer__food-pairing'>
+                    Pair with: ${beer.food_pairing.join(', ')}
                 </div>
+            </div>
         </div>
        `; 
-        beerDiv.innerHTML = beerHTML;
-        beers.appendChild(beerDiv);
-    })
+    });
+    
+    beersDiv.innerHTML = beerHtml;
 }
 
+// initial get
+getBeers();
 
-getBeers()
+//https://api.punkapi.com/v2/beers
