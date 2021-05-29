@@ -176,7 +176,6 @@ input + svg {
 }
 
 .beer__content {
-
 position: absolute;
     top: 0;
     left: 0;
@@ -188,7 +187,7 @@ position: absolute;
     cursor: pointer;
     opacity: 0;
     transition: opacity .8s ease;
-} */
+} 
  .beer__content:hover {
     opacity: 0.92;
 }
