@@ -120,7 +120,7 @@ input + svg {
 .hops:checked + svg,
 .hops:focus + svg {
     fill: var(--green);
-} */
+} 
 
 /* pagination buttons */
 
@@ -141,7 +141,7 @@ input + svg {
 .page-btn:disabled {
     cursor: default;
     color: var(--disabled);
-} */
+} 
 
 /* beer styles */
  .beers {
@@ -154,7 +154,7 @@ input + svg {
     justify-content: center;
     align-items: flex-end;
     position: relative;
-} */
+} 
 
  .beers, .beer {
     display: grid;
