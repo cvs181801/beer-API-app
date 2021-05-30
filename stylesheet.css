@@ -117,12 +117,7 @@ input + svg {
     cursor: pointer;
 }
 
-.hops:hover,
-.hops:checked + svg,
-.hops:focus + svg {
-    fill: var(--green);
-    cursor: pointer;
-} 
+
 
 /* pagination buttons */
 
@@ -215,4 +210,11 @@ position: absolute;
     font-style: italic;
     font-size: .9rem;
     line-height: 1.3em;
+} 
+
+.hops:hover,
+.hops:checked + svg,
+.hops:focus + svg {
+    fill: var(--green);
+    cursor: pointer;
 } 
