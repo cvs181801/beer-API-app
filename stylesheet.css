@@ -114,12 +114,14 @@ input + svg {
 .beer:checked + svg,
 .beer:focus + svg {
     fill: var(--orange);
+    cursor: pointer;
 }
 
 .hops:hover,
 .hops:checked + svg,
 .hops:focus + svg {
     fill: var(--green);
+    cursor: pointer;
 } 
 
 /* pagination buttons */
